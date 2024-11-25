@@ -1,0 +1,70 @@
+$background: #F0F0F0;
+$white: #fff;
+$black: #000;
+$grey: #666;
+$primary: #3066BEA3;
+$primary-hover: #265fa3;
+$info: #27ae60;
+$info-hover: #229e56;
+$danger: #FF4C4C;
+$medium: #FFA726;
+
+$font-bold: 700;
+$font-medium: 400;
+$time: 0.2s;
+$easing: ease-in-out;
+
+
+@mixin shadow {
+  box-shadow: 0 30px 25px -20px rgba($black, 0.15);
+}
+
+@mixin shadow-dark {
+  box-shadow: 0 36px 28px -20px rgba($black, 0.20);
+}
+
+@mixin flex-content-center{
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-content-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+%caps {
+  font-size: 1em;
+  text-transform: lowercase;
+  font-weight: $font-medium;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, ".SFNSText-Regular", 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  color: $grey;
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  all: unset;
+}
+
+.page-header{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  h1{
+    text-transform: capitalize;
+  }
+}

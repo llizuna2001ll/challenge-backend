@@ -1,0 +1,116 @@
+@import "../App.scss";
+
+.cart-hover {
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff4081;
+  }
+}
+
+.right-side-bar {
+  position: fixed;
+  top: 0;
+  right: -20px;
+  width: 380px;
+  height: 100vh;
+  background-color: $white;
+  color: black;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 100000;
+  overflow-y: scroll;
+  &.active {
+    transform: translateX(0);
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .cart-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 20px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.21);
+    border-top: solid 1px rgba(0, 0, 0, 0.21);
+
+    .product-image img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .item-information {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+      justify-content: space-between;
+      flex: 1;
+
+      p {
+        margin: 0;
+      }
+
+      .item-actions {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        button {
+          padding: 5px 10px;
+          background-color: #666;
+          width: 30px;
+          height: 30px;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: #444;
+          }
+        }
+        .delete-button {
+          padding: 5px 10px;
+          background-color: #e74c3c;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: .1s ease-in-out;
+          &:hover {
+            scale: 110%;
+          }
+        }
+
+      }
+
+      .item-total {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+    }
+  }
+}

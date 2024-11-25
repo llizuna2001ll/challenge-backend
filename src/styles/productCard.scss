@@ -1,0 +1,110 @@
+@import "../App";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 350px;
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  @include shadow;
+
+  img {
+    width: 200px;
+    height: 140px;
+    object-fit: contain;
+  }
+
+  hr {
+    opacity: 50%;
+    width: 100%;
+  }
+}
+
+.product-card-header {
+  @include flex-content-between;
+
+  .product-title {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-price {
+    color: $black;
+    border-radius: 20px;
+  }
+}
+
+.product-button {
+  @include flex-content-between;
+  align-items: center;
+  text-align: center;
+
+  button {
+    background-color: $primary;
+    color: $white;
+    width: 35%;
+    height: 30px  ;
+    padding: 10px 5px;
+    border-radius: 10px;
+    @include flex-content-center;
+    cursor: pointer;
+    @include shadow;
+    transition: $easing $time;
+    &:hover {
+      background-color: $primary-hover;
+      scale: 110%;
+      font-weight: $font-bold;
+      @include shadow-dark;
+    }
+
+    &.add-to-cart{
+      background-color: $info;
+
+      &:hover{
+        background-color: $info-hover;
+      }
+    }
+  }
+}
+
+.card-information {
+  @include flex-content-center;
+  flex-direction: column;
+
+  p {
+    font-size: 0.8em;
+    font-weight: $font-bold;
+    margin-bottom: 0;
+  }
+}
+
+.rating-badge {
+  position: relative;
+  top: -20px;
+  left: -20px;
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  align-content: center;
+  font-weight: $font-bold;
+  color: $white;
+  border-radius: 10px 0 5px 0;
+  @include shadow-dark;
+
+  &.medium {
+    background-color: $medium;
+  }
+
+  &.good {
+    background-color: $info;
+  }
+
+  &.bad {
+    background-color: $danger;
+  }
+}

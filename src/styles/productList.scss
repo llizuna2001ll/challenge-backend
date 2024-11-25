@@ -1,0 +1,10 @@
+@import "../App.scss";
+
+.product-list{
+  margin-top: 30px;
+  margin-left: 20px;
+  @include flex-content-center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+

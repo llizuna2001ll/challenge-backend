@@ -1,0 +1,41 @@
+@import "../App";
+
+.header-container{
+  width: 100%;
+  height: 80px;
+  background-color: $primary;
+  @include shadow-dark;
+  h2{
+    color: #FAFAFA;
+  }
+  div{
+    @include flex-content-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .categories{
+    gap: 20px;
+    color: $white;
+    @include flex-content-center;
+  }
+
+  li{
+    list-style: none;
+  }
+}
+
+.cart-icon{
+  padding-right: 20px;
+}
+
+.cart-hover{
+  transition: .2s ease-in-out;
+  padding: 10px;
+  border-radius: 30px;
+
+  &:hover{
+    background-color: $primary-hover;
+  }
+}
